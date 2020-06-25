@@ -1,0 +1,17 @@
+standalone -Djboss.http.port=9080
+9ec62bd4-c009-4a4c-aa31-f8d1fbc77b48
+oidc-code-flow
+
+http://localhost:8080/api/products/
+
+
+keycloak.auth-server-url=http://localhost:8180/auth
+keycloak.realm=SpringBootKeycloak
+keycloak.resource=login-app
+keycloak.public-client=true
+keycloak.security-constraints[0].authRoles[0]=user
+keycloak.security-constraints[0].securityCollections[0].patterns[0]=/customers/*
+
+
+https://www.thomasvitale.com/spring-boot-keycloak-security/
+https://medium.com/devops-dudes/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e
